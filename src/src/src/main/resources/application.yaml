@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/auth_db?serverTimezone=Asia/Seoul}
+    username: ${DB_USERNAME:yeontteo}
+    password: ${DB_PASSWORD:namys0103!m}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update        # 개발 중: update / 배포: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: likelion-auth-service-jwt-secret-key-2024-very-long
+  access-expiration: 86400000     # 24시간 (ms)
+  refresh-expiration: 1209600000  # 14일 (ms)
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+

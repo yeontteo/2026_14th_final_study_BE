@@ -36,5 +36,10 @@ out/
 ### VS Code ###
 .vscode/
 
-### application.yml ###
-**/application-local.yml
+### 민감/대용량 파일 ###
+*.tar
+.ssh/
+ubuntu@*
+corelist.txt
+jarlist.txt
+query
